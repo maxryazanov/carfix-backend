@@ -12,7 +12,6 @@ const SECRET_KEY = process.env.SECRET_KEY || '5604f0521101633c08916e56e8834a9617
 
 app.use(express.json());
 app.use(cors());
-app.use(express.static(path.join(__dirname, "public"))); // Папка с фронтендом
 
 // Подключение к базе данных
 const db = new sqlite3.Database('./database.db', (err) => {
