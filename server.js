@@ -200,6 +200,13 @@ app.delete('/maintenance/:id', authenticateToken, (req, res) => {
     });
 });
 
+app.get('/debug-db', (req, res) => {
+    db.all('SELECT * FROM users', (err, rows) => {
+      if (err) return res.status(500).json({ error: err.message });
+      res.json(rows);
+    });
+  });
+
 // Запуск сервера
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
