@@ -7,7 +7,7 @@ const cors = require('cors');
 const path = require("path");
 
 const app = express();
-const PORT = 3001;
+const PORT = 3000;
 const SECRET_KEY = process.env.SECRET_KEY || '5604f0521101633c08916e56e8834a9617f9149b3051241a2185d1ad12a2f0be';
 
 app.use(express.json());
